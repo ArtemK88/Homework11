@@ -7,9 +7,8 @@ import java.util.HashSet;
 public class Words1 {
     public static void main(String[] args) {
         String text = "Hello world hello World is Is a A the The ";
-        text = text.replaceAll("[^a-zA-Z ]", "");
         HashSet<String> uniqueWords = new HashSet<>();
-        String[] words = text.split("\\W+");
+        String[] words = text.split(" ");
         for (String word : words) {
             String lowercaseWord = word.toLowerCase();
             uniqueWords.add(lowercaseWord);
